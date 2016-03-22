@@ -16,16 +16,16 @@ $rows = 50; // количество строк, tr
 $cols = 2; // количество столбцов, td
 
 echo '<table border="1">';
-
-for ($tr=1; $tr<=$rows; $tr++){ 
+for ($tr=1; $tr<=$rows; $tr++){    
 echo '<tr>';
 if ($tr%2==0)        continue;
-for ($td=0; $td<$cols; $td++) 
+for ($td=0; $td<$cols; $td++){
 if ($td% 2 == 0) {
 echo '<td width="5px" height="5px" bgcolor="LawnGreen">' . ($tr+$td) .'</td>';
 }
 else {
 echo '<td width="5px" height="5px" bgcolor="Cyan">'. ($tr+$td) .'</td>';
+}
 }
 echo '</tr>';
 }
