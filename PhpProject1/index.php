@@ -15,17 +15,17 @@ and open the template in the editor.
 $rows = 50; // количество строк, tr
 $cols = 2; // количество столбцов, td
 
-echo '<table border="2">';
+echo '<table border="1">';
 
-for ($tr=1; $tr<=$rows; $tr+=1){ 
+for ($tr=1; $tr<=$rows; $tr++){ 
 echo '<tr>';
 if ($tr%2==0)        continue;
 for ($td=0; $td<$cols; $td++) 
 if ($td% 2 == 0) {
-echo '<td width="20px" height="20px" bgcolor="green">' . ($tr+$td) .'</td>';
+echo '<td width="5px" height="5px" bgcolor="LawnGreen">' . ($tr+$td) .'</td>';
 }
 else {
-echo '<td width="20px" height="20px" bgcolor="red">'. ($tr+$td) .'</td>';
+echo '<td width="5px" height="5px" bgcolor="Cyan">'. ($tr+$td) .'</td>';
 }
 echo '</tr>';
 }
