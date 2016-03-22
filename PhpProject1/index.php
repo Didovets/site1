@@ -17,24 +17,16 @@ $cols = 2; // количество столбцов, td
 
 echo '<table border="2">';
 
-for ($tr=1; $tr<=$rows; $tr+=1){ // в этом цикле счётчик $tr 
-    // следит за количеством строк и всегда равен текущему номеру строки.
-    // То есть в начале $tr=1, так как в начале у нас 1 строка, затем
-    // каждый раз прибавляем единицу, пока не дойдём до заданного количества
-    // $rows.
+for ($tr=1; $tr<=$rows; $tr+=1){ 
 echo '<tr>';
 if ($tr%2==0)        continue;
-if ($tr% 2 == 0) {
-  cols[Count_row].style.backgroundColor="Limegreen"
-  cols[Count_row].style.color="Darkred"
- }
- else {
-  cols[Count_row].style.backgroundColor="Yellow"
-  cols[Count_row].style.color="Blue"
- }
-for ($td=0; $td<$cols; $td++) // в этом цикле счётчик $td аналогичен
-                                    // счётчику $tr. 
-echo '<td>'. ($tr+$td) .'</td>';
+for ($td=0; $td<$cols; $td++) 
+if ($td% 2 == 0) {
+echo '<td width="20px" height="20px" bgcolor="green">' . ($tr+$td) .'</td>';
+}
+else {
+echo '<td width="20px" height="20px" bgcolor="red">'. ($tr+$td) .'</td>';
+}
 echo '</tr>';
 }
 echo '</table>';  
